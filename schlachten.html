@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schlüsselschlachten – Die Westfront 1914–1918</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .battle-card {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-left: 10px solid var(--primary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .battle-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: var(--background);
+            font-family: var(--font-heading);
+            font-weight: bold;
+        }
+
+        .quiz-container {
+            background: var(--primary);
+            color: var(--background);
+            padding: 3rem;
+            border-radius: 8px;
+            margin-top: 5rem;
+        }
+
+        .quiz-question {
+            margin-bottom: 2rem;
+        }
+
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quiz-option {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .quiz-option:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .quiz-option.correct {
+            background: var(--secondary) !important;
+        }
+
+        .quiz-option.incorrect {
+            background: var(--accent) !important;
+        }
+
+        #quiz-feedback {
+            margin-top: 2rem;
+            font-weight: bold;
+            font-family: var(--font-heading);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Die Westfront 1914–1918</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="kontext.html">Kontext</a></li>
+            <li><a href="leben.html">Leben im Graben</a></li>
+            <li><a href="schlachten.html">Schlachten</a></li>
+            <li><a href="folgen.html">Folgen</a></li>
+            <li><a href="quellen.html">Quellen</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Startseite</a> > Schlüsselschlachten
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h1>Die großen Zermürbungsschlachten</h1>
+            <p>
+                Die Schlachten an der Westfront waren keine Ereignisse im herkömmlichen Sinne, sondern oft monatelange Materialschlachten, bei denen strategische Geländegewinne minimal blieben. Die Analyse zeigt, dass diese Offensiven oft auf einer "Ermattungsstrategie" basierten – das Ziel war nicht der Durchbruch, sondern die systematische Vernichtung der feindlichen Reserven (Falkenhayn, 1916).
+            </p>
+        </section>
+
+        <section class="fade-in">
+            <figure style="margin-bottom: 3rem;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Carte_Verdun_1916.png" alt="Karte der Schlacht um Verdun" style="width: 100%; max-width: 600px; display: block; margin: 0 auto; border: 1px solid #ccc; padding: 5px;">
+                <figcaption style="font-size: 0.8rem; font-style: italic; text-align: center; margin-top: 0.5rem;">Strategische Karte der Befestigungen und Frontlinien bei Verdun, 1916. (Quelle: Wikimedia Commons)</figcaption>
+            </figure>
+
+            <div class="battle-card">
+                <h2>Schlacht um Verdun (1916)</h2>
+                <p>
+                    General Erich von Falkenhayn verfolgte das Ziel, die französische Armee bei Verdun zum "Ausbluten" zu bringen. Die Festung Verdun sollte durch massive Artillerieangriffe so stark bedroht werden, dass Frankreich gezwungen wäre, jeden verfügbaren Soldaten dorthin zu schicken.
+                </p>
+                <p>
+                    Die kritische Betrachtung dieser Strategie offenbart eine Fehlkalkulation: Auch die deutsche Armee blutete in dem Maße aus wie die französische. Das Ergebnis war eine fast einjährige Schlacht mit minimalen Geländeveränderungen, die zum Inbegriff der Sinnlosigkeit des industriellen Krieges wurde.
+                </p>
+                <div class="battle-stats">
+                    <span>Verluste: ca. 700.000 (Gesamt)</span>
+                    <span>Dauer: 302 Tage</span>
+                </div>
+            </div>
+
+            <div class="battle-card">
+                <h2>Schlacht an der Somme (1916)</h2>
+                <p>
+                    Die britisch-französische Offensive an der Somme sollte die deutsche Front entlasten. Bekannt wurde sie vor allem durch den katastrophalen ersten Tag, an dem die British Army über 57.000 Verluste verzeichnete – ein Resultat einer veralteten Infanterietaktik gegen moderne MG-Stellungen.
+                </p>
+                <div class="battle-stats">
+                    <span>Verluste: über 1.000.000 (Gesamt)</span>
+                    <span>Dauer: 141 Tage</span>
+                </div>
+            </div>
+
+            <div class="battle-card">
+                <h2>Die Flandernschlachten (Ypern)</h2>
+                <p>
+                    In der Umgebung von Ypern wurden neue, grausame Technologien wie das Giftgas (1915 erstmals massiv eingesetzt) erprobt. Hier zeigte sich die Ohnmacht der Strategie gegenüber den chemischen und geographischen Bedingungen (Sumpflandschaft).
+                </p>
+            </div>
+        </section>
+
+        <section class="fade-in quiz-container">
+            <h2>Teste dein Wissen!</h2>
+            <div id="quiz">
+                <div class="quiz-question">
+                    <p id="question-text">1. Welches Ziel verfolgte Falkenhayn mit der Strategie von Verdun?</p>
+                    <ul class="quiz-options" id="options-list">
+                        <!-- Options generated by JS -->
+                    </ul>
+                </div>
+                <div id="quiz-feedback"></div>
+                <button onclick="nextQuestion()" id="next-btn" style="display:none; background: var(--secondary); color: white; border: none; padding: 1rem 2rem; cursor: pointer; font-family: var(--font-heading); margin-top: 1rem;">Nächste Frage</button>
+            </div>
+        </section>
+
+        <p style="margin-top: 4rem;"><a href="folgen.html">Die humanitären Folgen und das Gedenken ></a></p>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 – Historisches Archiv Projekt: Die Westfront 1914–1918</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const quizData = [
+            {
+                q: "1. Welches Ziel verfolgte Falkenhayn mit der Strategie von Verdun?",
+                a: ["Einnahme von Paris", "Den Gegner 'ausbluten' lassen", "Schneller Durchbruch nach England"],
+                c: 1
+            },
+            {
+                q: "2. Welches Land setzte Giftgas erstmals in großem Maßstab bei Ypern ein?",
+                a: ["Großbritannien", "Frankreich", "Deutsches Reich"],
+                c: 2
+            },
+            {
+                q: "3. Was war das Ergebnis der Somme-Offensive 1916?",
+                a: ["Ein schneller strategischer Sieg", "Über 1 Million Verluste ohne Durchbruch", "Der sofortige Waffenstillstand"],
+                c: 1
+            },
+            {
+                q: "4. Was versteht man unter einer 'Materialschlacht'?",
+                a: ["Ein diplomatisches Treffen", "Ein Krieg, der durch den massiven Einsatz von Gütern und Technik entschieden wird", "Ein schneller Kavallerieangriff"],
+                c: 1
+            },
+            {
+                q: "5. Wie lang war die Frontlinie an der Westfront in etwa?",
+                a: ["100 km", "700 km", "5000 km"],
+                c: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+
+        function loadQuestion() {
+            const q = quizData[currentQuestion];
+            document.getElementById('question-text').innerText = q.q;
+            const list = document.getElementById('options-list');
+            list.innerHTML = '';
+            q.a.forEach((opt, index) => {
+                const li = document.createElement('li');
+                li.className = 'quiz-option';
+                li.innerText = opt;
+                li.onclick = () => checkAnswer(index);
+                list.appendChild(li);
+            });
+            document.getElementById('quiz-feedback').innerText = '';
+            document.getElementById('next-btn').style.display = 'none';
+        }
+
+        function checkAnswer(idx) {
+            const q = quizData[currentQuestion];
+            const options = document.querySelectorAll('.quiz-option');
+
+            if (idx === q.c) {
+                options[idx].classList.add('correct');
+                document.getElementById('quiz-feedback').innerText = "Richtig!";
+            } else {
+                options[idx].classList.add('incorrect');
+                options[q.c].classList.add('correct');
+                document.getElementById('quiz-feedback').innerText = "Falsch. Die richtige Antwort ist: " + q.a[q.c];
+            }
+
+            // Disable all options
+            options.forEach(opt => opt.onclick = null);
+            document.getElementById('next-btn').style.display = 'block';
+            if (currentQuestion === quizData.length - 1) {
+                document.getElementById('next-btn').innerText = "Quiz beendet";
+            }
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < quizData.length) {
+                loadQuestion();
+            } else {
+                document.getElementById('quiz').innerHTML = "<h3>Quiz abgeschlossen!</h3><p>Vielen Dank für deine Teilnahme.</p>";
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>

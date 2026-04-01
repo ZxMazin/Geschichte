@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Leben im Schützengraben – Die Westfront 1914–1918</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Slider Styles */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin: 3rem 0;
+            border: 5px solid var(--primary);
+        }
+
+        .slider-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-before {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Verdun_-_Village_of_Fleury_before_the_battle.jpg');
+            z-index: 1;
+        }
+
+        .img-after {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Verdun_-_Village_of_Fleury_after_the_battle.jpg');
+            width: 50%;
+            z-index: 2;
+            border-right: 4px solid var(--accent);
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 50%;
+            cursor: ew-resize;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .source-box {
+            background: #eee;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 5px solid var(--secondary);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Die Westfront 1914–1918</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="kontext.html">Kontext</a></li>
+            <li><a href="leben.html">Leben im Graben</a></li>
+            <li><a href="schlachten.html">Schlachten</a></li>
+            <li><a href="folgen.html">Folgen</a></li>
+            <li><a href="quellen.html">Quellen</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Startseite</a> > Das Leben im Schützengraben
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h1>Die Hölle unter der Erde</h1>
+            <p>
+                Der Alltag an der Westfront war weniger durch heroische Kämpfe als vielmehr durch Schmutz, Warten und die ständige Angst vor der industriellen Vernichtung geprägt. Das komplexe Grabensystem, oft Hunderte Kilometer lang, wurde für Millionen Männer zur Heimat.
+            </p>
+            <p>
+                Eine Analyse der Soldatenbriefe und Tagebücher offenbart die psychologischen Auswirkungen dieser Bedingungen. Der Historiker John Keegan beschreibt den Schützengraben als einen Ort der "totalen Immobilisierung", an dem der Soldat zum passiven Ziel der feindlichen Artillerie degradiert wurde.
+            </p>
+        </section>
+
+        <section class="fade-in">
+            <h2>Hygienische und physische Bedingungen</h2>
+            <p>
+                Die Gräben waren oft schlammgefüllte Löcher, in denen die hygienischen Zustände katastrophal waren. Rattenplagen, Läuse und die gefürchtete "Grabenfuß-Krankheit" – eine durch Feuchtigkeit verursachte Gewebezersetzung – gehörten zum Standardalltag. Die Ernährung war eintönig, oft auf Konserven beschränkt und durch logistische Engpässe unzureichend.
+            </p>
+            <div class="source-box">
+                "Der Schlamm ist überall. Wir essen Schlamm, wir trinken Schlamm, wir schlafen im Schlamm. Der Tod ist ein ständiger Begleiter, aber der Schlamm ist sein schlimmster Gehilfe."
+                <cite style="display: block; font-size: 0.9rem; margin-top: 0.5rem;">— Brief eines französischen Soldaten aus Verdun, 1916 (Bundesarchiv)</cite>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <h2>Psychologische Belastung und 'Shell Shock'</h2>
+            <p>
+                Die konstante Bedrohung durch Artilleriefeuer ("Trommelfeuer") führte zu massiven psychischen Traumata, die damals als "Kriegsneurose" oder "Shell Shock" bezeichnet wurden. Soldaten zeigten Symptome wie unkontrollierbares Zittern, Lähmungen ohne organischen Befund oder völlige Apathie.
+            </p>
+            <p>
+                Im Widerspruch dazu steht die anfängliche Sicht der militärischen Führung, die solche psychischen Erkrankungen oft als Feigheit oder Simulation abtat und drakonische Strafen verhängte. Erst im Verlauf des Krieges wurde die psychiatrische Dimension der industrialisierten Kriegsführung erkannt.
+            </p>
+        </section>
+
+        <section class="fade-in">
+            <h2>Bildervergleich: Vor und nach dem Bombardement</h2>
+            <p>Verwende den Schieberegler, um das Dorf Fleury vor und nach der Schlacht von Verdun zu vergleichen.</p>
+            <div class="slider-container" id="slider">
+                <div class="slider-img img-before"></div>
+                <div class="slider-img img-after" id="imgAfter"></div>
+                <div class="slider-handle" id="handle">↔</div>
+            </div>
+            <figcaption style="font-size: 0.8rem; font-style: italic;">
+                Dorf Fleury-devant-Douaumont vor (links) und nach (rechts) dem Artilleriebeschuss. (Quelle: Wikimedia Commons)
+            </figcaption>
+        </section>
+
+        <p style="margin-top: 4rem;"><a href="schlachten.html">Die strategische Dimension: Die großen Schlachten ></a></p>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 – Historisches Archiv Projekt: Die Westfront 1914–1918</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const slider = document.getElementById('slider');
+        const imgAfter = document.getElementById('imgAfter');
+        const handle = document.getElementById('handle');
+
+        let isResizing = false;
+
+        const setPosition = (x) => {
+            let containerRect = slider.getBoundingClientRect();
+            let position = ((x - containerRect.left) / containerRect.width) * 100;
+
+            if (position < 0) position = 0;
+            if (position > 100) position = 100;
+
+            imgAfter.style.width = `${position}%`;
+            handle.style.left = `${position}%`;
+        };
+
+        handle.addEventListener('mousedown', () => isResizing = true);
+        window.addEventListener('mouseup', () => isResizing = false);
+        window.addEventListener('mousemove', (e) => {
+            if (!isResizing) return;
+            setPosition(e.pageX);
+        });
+
+        // Mobile support
+        handle.addEventListener('touchstart', () => isResizing = true);
+        window.addEventListener('touchend', () => isResizing = false);
+        window.addEventListener('touchmove', (e) => {
+            if (!isResizing) return;
+            setPosition(e.touches[0].pageX);
+        });
+    </script>
+</body>
+</html>

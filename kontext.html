@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historischer Kontext – Die Westfront 1914–1918</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            background: rgba(0,0,0,0.02);
+            border-radius: 8px;
+        }
+
+        .timeline {
+            display: inline-block;
+            min-width: 100%;
+            padding: 0 50px;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+            transform: translateY(-50%);
+        }
+
+        .timeline-event {
+            display: inline-block;
+            width: 200px;
+            margin: 0 20px;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-event:hover {
+            transform: scale(1.1);
+        }
+
+        .event-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin: 10px auto;
+            border: 4px solid var(--background);
+            z-index: 2;
+            position: relative;
+        }
+
+        .event-date {
+            font-weight: bold;
+            font-family: var(--font-heading);
+            margin-bottom: 5px;
+        }
+
+        .event-title {
+            font-size: 0.9rem;
+            white-space: normal;
+        }
+
+        .event-details {
+            display: none;
+            position: absolute;
+            bottom: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 10;
+            white-space: normal;
+            border-top: 4px solid var(--accent);
+        }
+
+        .timeline-event.active .event-details {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Die Westfront 1914–1918</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="kontext.html">Kontext</a></li>
+            <li><a href="leben.html">Leben im Graben</a></li>
+            <li><a href="schlachten.html">Schlachten</a></li>
+            <li><a href="folgen.html">Folgen</a></li>
+            <li><a href="quellen.html">Quellen</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Startseite</a> > Historischer Kontext
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h1>Der Übergang zum Stellungskrieg</h1>
+            <p>
+                Zu Beginn des Ersten Weltkriegs im August 1914 basierten die Strategien der kriegführenden Mächte auf der Prämisse eines schnellen Bewegungskrieges. Der deutsche Schlieffen-Plan sah vor, Frankreich durch einen schnellen Zangenangriff über das neutrale Belgien innerhalb weniger Wochen zu besiegen, um anschließend die Truppen gegen das langsame Russland im Osten zu werfen (Strachan 2003, 163).
+            </p>
+            <p>
+                Dies lässt sich darauf zurückführen, dass die militärische Führung der Überzeugung war, technologische Überlegenheit würde die Offensive begünstigen. Eine kritische Betrachtung der ersten Kriegsmonate zeigt jedoch, dass genau das Gegenteil eintrat. Die Kombination aus massiver Feuerkraft, Eisenbahnmobilität und der Unfähigkeit, Durchbrüche strategisch auszunutzen, führte zwangsläufig in die statische Sackgasse.
+            </p>
+        </section>
+
+        <section class="fade-in">
+            <h2>Ursachenanalyse der defensiven Überlegenheit</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                <div>
+                    <h3>Technologische Asymmetrie</h3>
+                    <p>
+                        Waffen wie das Maschinengewehr und die moderne Artillerie machten Frontalangriffe auf ungeschützte Truppen zu einem Selbstmordkommando. Die Verteidigung hatte einen entscheidenden Vorteil: Sie konnte sich eingraben und die Angreifer im Sperrfeuer aufreiben. John Keegan argumentiert in *The Face of Battle* (1976), dass die physische Begrenzung der menschlichen Belastbarkeit gegenüber der industriellen Vernichtungskapazität der Waffen zu einer Lähmung der taktischen Mobilität führte.
+                    </p>
+                </div>
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/German_machine_gun_corps_Somme_1916.jpg" alt="Deutsches Maschinengewehr-Korps" style="width: 100%;">
+                    <figcaption style="font-size: 0.8rem; font-style: italic; margin-top: 0.5rem;">Deutsches Maschinengewehr-Korps an der Somme, 1916. (Quelle: Wikimedia Commons)</figcaption>
+                </figure>
+            </div>
+
+            <h3>Geographische und Logistische Faktoren</h3>
+            <p>
+                Im Gegensatz zur unendlichen Weite der Ostfront war der Raum im Westen durch die dichte Besiedlung und die Kanalisierung der Truppenbewegungen begrenzt. Sobald sich die Fronten vom Ärmelkanal bis zur Schweizer Grenze erstreckten (der sogenannte "Wettlauf zum Meer"), gab es keine offenen Flanken mehr, die man hätte umgehen können. Der Krieg wurde zu einem Kampf um Zentimeter, bei dem Millionen Menschenleben für minimale Geländegewinne geopfert wurden.
+            </p>
+        </section>
+
+        <section class="fade-in">
+            <h2>Interaktive Zeitachse der Westfront</h2>
+            <p>Klicke auf die Ereignisse für weitere Informationen.</p>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">August 1914</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Beginn des Bewegungskrieges</div>
+                        <div class="event-details">Einmarsch der deutschen Truppen in Belgien und Frankreich nach dem Schlieffen-Plan.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Sept. 1914</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Schlacht an der Marne</div>
+                        <div class="event-details">Der deutsche Vormarsch wird gestoppt. Die Hoffnung auf einen schnellen Sieg endet.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Okt.-Nov. 1914</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Wettlauf zum Meer</div>
+                        <div class="event-details">Beide Seiten versuchen die Flanken des Gegners zu umgehen, bis die Front die Küste erreicht.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Dezember 1914</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Erstarren der Front</div>
+                        <div class="event-details">Auf einer Länge von 700 km graben sich die Armeen ein. Der Stellungskrieg beginnt.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Februar 1916</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Schlacht um Verdun</div>
+                        <div class="event-details">Beginn der "Blutmühle" von Verdun – der Inbegriff der Materialschlacht.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Juli 1916</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Schlacht an der Somme</div>
+                        <div class="event-details">Britische Offensive mit den schwersten Verlusten in der Geschichte der British Army.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Nov. 1918</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Waffenstillstand</div>
+                        <div class="event-details">Das Ende der Kampfhandlungen an der Westfront nach dem Zusammenbruch der deutschen Defensive.</div>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 10rem;"><a href="leben.html">Erfahre mehr über den Alltag im Schützengraben ></a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 – Historisches Archiv Projekt: Die Westfront 1914–1918</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
