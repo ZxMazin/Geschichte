@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contexte Historique – Le Front de l'Ouest 1914-1918</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            background: rgba(0,0,0,0.02);
+            border-radius: 8px;
+        }
+
+        .timeline {
+            display: inline-block;
+            min-width: 100%;
+            padding: 0 50px;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+            transform: translateY(-50%);
+        }
+
+        .timeline-event {
+            display: inline-block;
+            width: 200px;
+            margin: 0 20px;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-event:hover {
+            transform: scale(1.1);
+        }
+
+        .event-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin: 10px auto;
+            border: 4px solid var(--background);
+            z-index: 2;
+            position: relative;
+        }
+
+        .event-date {
+            font-weight: bold;
+            font-family: var(--font-heading);
+            margin-bottom: 5px;
+        }
+
+        .event-title {
+            font-size: 0.9rem;
+            white-space: normal;
+        }
+
+        .event-details {
+            display: none;
+            position: absolute;
+            bottom: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 10;
+            white-space: normal;
+            border-top: 4px solid var(--accent);
+        }
+
+        .timeline-event.active .event-details {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Le Front de l'Ouest 1914-1918</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="kontext.html">Contexte</a></li>
+            <li><a href="leben.html">Vie dans les tranchées</a></li>
+            <li><a href="schlachten.html">Batailles</a></li>
+            <li><a href="folgen.html">Conséquences</a></li>
+            <li><a href="quellen.html">Sources</a></li>
+            <li><a href="autoren.html">Auteurs</a></li>
+            <li><a href="spiel.html">Jeu</a></li>
+            <li style="margin-left: 2rem;"><a href="../kontext.html">DE</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Accueil</a> > Contexte Historique
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h1>Le passage à la guerre de position</h1>
+            <p>
+                Au début de la Première Guerre mondiale, en août 1914, les stratégies des puissances belligérantes reposaient sur le principe d'une guerre de mouvement rapide. Le plan allemand Schlieffen prévoyait de vaincre la France par une attaque rapide en tenaille via la Belgique neutre en quelques semaines, afin de jeter ensuite les troupes contre la Russie lente à l'Est (Strachan 2003, 163).
+            </p>
+            <p>
+                Cela s'explique par la conviction des dirigeants militaires que la supériorité technologique favoriserait l'offensive. Une analyse critique des premiers mois de la guerre montre pourtant que c'est exactement le contraire qui s'est produit. La combinaison d'une puissance de feu massive, de la mobilité ferroviaire et de l'incapacité à exploiter stratégiquement les percées a inévitablement mené à l'impasse statique.
+            </p>
+        </section>
+
+        <section class="fade-in">
+            <h2>Analyse des causes de la supériorité défensive</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                <div>
+                    <h3>Asymétrie technologique</h3>
+                    <p>
+                        Des armes telles que la mitrailleuse et l'artillerie moderne ont transformé les attaques frontales contre des troupes sans protection en missions suicidaires. La défense avait un avantage décisif : elle pouvait s'enterrer et décimer les attaquants sous un barrage de feu. John Keegan soutient dans *The Face of Battle* (1976) que la limite physique de la résilience humaine face à la capacité d'extermination industrielle des armes a conduit à une paralysie de la mobilité tactique.
+                    </p>
+                </div>
+                <figure>
+                    <img src="../assets/img/mg_corps.jpg" alt="Corps de mitrailleuses allemand" style="width: 100%;">
+                    <figcaption style="font-size: 0.8rem; font-style: italic; margin-top: 0.5rem;">Corps de mitrailleuses allemand à la Somme, 1916. (Source : Wikimedia Commons)</figcaption>
+                </figure>
+            </div>
+
+            <h3>Facteurs géographiques et logistiques</h3>
+            <p>
+                Contrairement à l'étendue infinie du front de l'Est, l'espace à l'Ouest était limité par une forte densité de population et la canalisation des mouvements de troupes. Dès que les fronts se sont étendus de la Manche à la frontière suisse (la « course à la mer »), il n'y avait plus de flancs ouverts à contourner. La guerre est devenue une lutte pour chaque centimètre, où des millions de vies humaines ont été sacrifiées pour des gains territoriaux minimes.
+            </p>
+        </section>
+
+        <section class="fade-in">
+            <h2>Chronologie interactive du front de l'Ouest</h2>
+            <p>Cliquez sur les événements pour plus d'informations.</p>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Août 1914</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Début de la guerre de mouvement</div>
+                        <div class="event-details">Invasion des troupes allemandes en Belgique et en France selon le plan Schlieffen.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Sept. 1914</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Bataille de la Marne</div>
+                        <div class="event-details">L'avancée allemande est stoppée. L'espoir d'une victoire rapide prend fin.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Oct.-Nov. 1914</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Course à la mer</div>
+                        <div class="event-details">Les deux parties tentent de contourner les flancs de l'adversaire jusqu'à ce que le front atteigne la côte.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Décembre 1914</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Figement du front</div>
+                        <div class="event-details">Sur une longueur de 700 km, les armées s'enterrent. La guerre de position commence.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Février 1916</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Bataille de Verdun</div>
+                        <div class="event-details">Début du « hachoir à viande » de Verdun – l'essence même de la bataille de matériel.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Juillet 1916</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Bataille de la Somme</div>
+                        <div class="event-details">Offensive britannique avec les pertes les plus lourdes de l'histoire de la British Army.</div>
+                    </div>
+                    <div class="timeline-event" onclick="this.classList.toggle('active')">
+                        <div class="event-date">Nov. 1918</div>
+                        <div class="event-dot"></div>
+                        <div class="event-title">Armistice</div>
+                        <div class="event-details">Fin des hostilités sur le front de l'Ouest après l'effondrement de la défense allemande.</div>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 10rem;"><a href="leben.html">En savoir plus sur le quotidien dans les tranchées ></a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 – Projet d'Archives Historiques : Le Front de l'Ouest 1914-1918</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

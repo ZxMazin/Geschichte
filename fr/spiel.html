@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Décisions sur le Front de l'Ouest – Le Jeu</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .game-container {
+            background: white;
+            padding: 3rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 10px solid var(--accent);
+            margin-top: 2rem;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #game-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .choice-btn {
+            background: var(--primary);
+            color: var(--background);
+            border: none;
+            padding: 1rem 1.5rem;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-body);
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+
+        .choice-btn:hover {
+            background: var(--accent);
+        }
+
+        #game-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 2rem;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Le Front de l'Ouest 1914-1918</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="kontext.html">Contexte</a></li>
+            <li><a href="leben.html">Vie dans les tranchées</a></li>
+            <li><a href="schlachten.html">Batailles</a></li>
+            <li><a href="folgen.html">Conséquences</a></li>
+            <li><a href="quellen.html">Sources</a></li>
+            <li><a href="autoren.html">Auteurs</a></li>
+            <li><a href="spiel.html">Jeu</a></li>
+            <li style="margin-left: 2rem;"><a href="../spiel.html">DE</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Accueil</a> > Simulation de Décision
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h1>Décisions dans la tranchée : Une simulation</h1>
+            <p>
+                Dans cette simulation interactive, vous incarnez le rôle d'un jeune soldat sur le front de l'Ouest en 1916. Vos décisions influencent non seulement votre destin, mais reflètent également les dilemmes historiques de l'époque.
+            </p>
+
+            <div class="game-container">
+                <div id="game-image" style="background-image: url('../assets/img/hero.jpg');"></div>
+                <div id="game-content">
+                    <p id="game-text">Nous sommes en octobre 1916. Vous vous trouvez dans un secteur de tranchée boueux près de la Somme. Le pilonnage d'artillerie ennemie vient de faiblir. Votre commandant ordonne une percée dans le no man's land pour neutraliser une position de mitrailleuse ennemie. Que faites-vous ?</p>
+                    <div id="choices">
+                        <button class="choice-btn" onclick="makeChoice(1)">Vous obéissez immédiatement à l'ordre et sortez de la tranchée.</button>
+                        <button class="choice-btn" onclick="makeChoice(2)">Vous attendez un instant pour évaluer la situation et chercher un abri.</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 – Projet d'Archives Historiques : Le Front de l'Ouest 1914-1918</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const gameData = {
+            start: {
+                text: "Nous sommes en octobre 1916. Vous vous trouvez dans un secteur de tranchée boueux près de la Somme. Le pilonnage d'artillerie ennemie vient de faiblir. Votre commandant ordonne une percée dans le no man's land pour neutraliser une position de mitrailleuse ennemie. Que faites-vous ?",
+                choices: [
+                    { text: "Vous obéissez immédiatement à l'ordre et sortez de la tranchée.", next: 'charge' },
+                    { text: "Vous attendez un instant pour évaluer la situation et chercher un abri.", next: 'wait' }
+                ]
+            },
+            charge: {
+                text: "Vous foncez tête baissée. La boue est profonde et entrave votre progression. Le feu des mitrailleuses reprend soudainement. Vous remarquez que les barbelés devant la position ennemie n'ont pas été détruits par l'artillerie.",
+                choices: [
+                    { text: "Vous tentez de couper les fils avec une cisaille.", next: 'wire' },
+                    { text: "Vous vous jetez dans un trou d'obus pour chercher un abri.", next: 'crater' }
+                ]
+            },
+            wait: {
+                text: "Votre court instant d'hésitation vous sauve probablement la vie, car les premiers camarades tombent sous le feu des mitrailleuses. Votre commandant vous hurle d'avancer enfin. La situation est désespérée.",
+                choices: [
+                    { text: "Vous avancez maintenant prudemment de trou en trou.", next: 'crater' },
+                    { text: "Vous refusez d'avancer, car c'est une mission suicide.", next: 'refuse' }
+                ]
+            },
+            wire: {
+                text: "Une erreur fatale. Pendant que vous manipulez les fils, vous devenez une cible facile. Historiquement, les barbelés non détruits étaient l'une des causes principales de l'échec de nombreuses offensives.",
+                choices: [
+                    { text: "Redémarrer", next: 'start' }
+                ]
+            },
+            crater: {
+                text: "Vous êtes couché dans l'eau d'un trou d'obus. À côté de vous gisent les restes d'attaques précédentes. Vous êtes isolé. La nuit tombe. Vous devez décider : retourner vers vos propres lignes ou tenter d'atteindre la position malgré tout ?",
+                choices: [
+                    { text: "Retraite sous la protection de l'obscurité.", next: 'retreat' },
+                    { text: "Une attaque solitaire à la faveur de la nuit.", next: 'night_attack' }
+                ]
+            },
+            refuse: {
+                text: "Le refus d'obéissance au front était souvent puni de manière draconienne. Vous êtes arrêté. Cela illustre la justice militaire impitoyable qui subordonnait les destins individuels à la discipline stratégique.",
+                choices: [
+                    { text: "Redémarrer", next: 'start' }
+                ]
+            },
+            retreat: {
+                text: "Après des heures passées dans la boue, vous atteignez vos lignes. Vous êtes vivant, mais marqué psychologiquement. Vous avez vécu le « Shell Shock » dans votre propre chair. Vous êtes transféré dans un hôpital de campagne derrière le front.",
+                choices: [
+                    { text: "Simulation terminée - Vers la conclusion", next: 'end' }
+                ]
+            },
+            night_attack: {
+                text: "Votre tentative courageuse échoue en raison de l'épuisement et de la perte d'orientation. Vous êtes porté disparu. Comme des millions d'autres, vous restez un « soldat inconnu » dans les plaines de France.",
+                choices: [
+                    { text: "Redémarrer", next: 'start' }
+                ]
+            },
+            end: {
+                text: "La simulation montre que dans la guerre industrielle, il n'y avait souvent pas de « bonne » décision. Le destin individuel était soumis à la logique de la bataille de matériel. Survivre était souvent une question de pur hasard.",
+                choices: [
+                    { text: "Retour à l'accueil", next: 'index' }
+                ]
+            }
+        };
+
+        function makeChoice(choiceIndex) {
+            const currentStep = document.getElementById('game-text').dataset.step || 'start';
+            const nextKey = gameData[currentStep].choices[choiceIndex - 1].next;
+
+            if (nextKey === 'index') {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            updateGame(nextKey);
+        }
+
+        function updateGame(stepKey) {
+            const step = gameData[stepKey];
+            const textEl = document.getElementById('game-text');
+            const choicesEl = document.getElementById('choices');
+
+            textEl.innerText = step.text;
+            textEl.dataset.step = stepKey;
+
+            choicesEl.innerHTML = '';
+            step.choices.forEach((choice, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'choice-btn';
+                btn.innerText = choice.text;
+                btn.onclick = () => makeChoice(index + 1);
+                choicesEl.appendChild(btn);
+            });
+
+            // Scroll to game container
+            document.querySelector('.game-container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initialize dataset
+        document.getElementById('game-text').dataset.step = 'start';
+    </script>
+</body>
+</html>

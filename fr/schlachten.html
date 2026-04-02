@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batailles Clés – Le Front de l'Ouest 1914-1918</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .battle-card {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-left: 10px solid var(--primary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .battle-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: var(--background);
+            font-family: var(--font-heading);
+            font-weight: bold;
+        }
+
+        .quiz-container {
+            background: var(--primary);
+            color: var(--background);
+            padding: 3rem;
+            border-radius: 8px;
+            margin-top: 5rem;
+        }
+
+        .quiz-question {
+            margin-bottom: 2rem;
+        }
+
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quiz-option {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .quiz-option:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .quiz-option.correct {
+            background: var(--secondary) !important;
+        }
+
+        .quiz-option.incorrect {
+            background: var(--accent) !important;
+        }
+
+        #quiz-feedback {
+            margin-top: 2rem;
+            font-weight: bold;
+            font-family: var(--font-heading);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Le Front de l'Ouest 1914-1918</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="kontext.html">Contexte</a></li>
+            <li><a href="leben.html">Vie dans les tranchées</a></li>
+            <li><a href="schlachten.html">Batailles</a></li>
+            <li><a href="folgen.html">Conséquences</a></li>
+            <li><a href="quellen.html">Sources</a></li>
+            <li><a href="autoren.html">Auteurs</a></li>
+            <li><a href="spiel.html">Jeu</a></li>
+            <li style="margin-left: 2rem;"><a href="../schlachten.html">DE</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Accueil</a> > Batailles Clés
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h1>Les grandes batailles d'usure</h1>
+            <p>
+                Les batailles sur le front de l'Ouest n'étaient pas des événements au sens traditionnel, mais souvent des batailles de matériel qui duraient des mois, au cours desquelles les gains territoriaux stratégiques restaient minimes. L'analyse montre que ces offensives reposaient souvent sur une « stratégie d'attrition » – l'objectif n'était pas la percée, mais la destruction systématique des réserves ennemies (Falkenhayn, 1916).
+            </p>
+        </section>
+
+        <section class="fade-in">
+            <figure style="margin-bottom: 3rem;">
+                <img src="../assets/img/map_verdun.png" alt="Carte de la bataille de Verdun" style="width: 100%; max-width: 600px; display: block; margin: 0 auto; border: 1px solid #ccc; padding: 5px;">
+                <figcaption style="font-size: 0.8rem; font-style: italic; text-align: center; margin-top: 0.5rem;">Carte stratégique des fortifications et des lignes de front à Verdun, 1916. (Source : Wikimedia Commons)</figcaption>
+            </figure>
+
+            <div class="battle-card">
+                <h2>Bataille de Verdun (1916)</h2>
+                <p>
+                    Le général Erich von Falkenhayn poursuivait l'objectif de « saigner à blanc » l'armée française à Verdun. La forteresse de Verdun devait être menacée par des attaques d'artillerie massives si fortes que la France serait obligée d'y envoyer chaque soldat disponible.
+                </p>
+                <p>
+                    L'examen critique de cette stratégie révèle une erreur de calcul : l'armée allemande a elle aussi saigné autant que l'armée française. Le résultat a été une bataille de près d'un an avec des changements territoriaux minimes, devenue l'incarnation de l'absurdité de la guerre industrielle.
+                </p>
+                <div class="battle-stats">
+                    <span>Pertes : env. 700 000 (total)</span>
+                    <span>Durée : 302 jours</span>
+                </div>
+            </div>
+
+            <div class="battle-card">
+                <h2>Bataille de la Somme (1916)</h2>
+                <p>
+                    L'offensive franco-britannique sur la Somme visait à soulager le front allemand. Elle est surtout connue pour sa première journée catastrophique, au cours de laquelle la British Army a enregistré plus de 57 000 pertes – résultat d'une tactique d'infanterie obsolète face à des positions de mitrailleuses modernes.
+                </p>
+                <div class="battle-stats">
+                    <span>Pertes : plus de 1 000 000 (total)</span>
+                    <span>Durée : 141 jours</span>
+                </div>
+            </div>
+
+            <div class="battle-card">
+                <h2>Les batailles des Flandres (Ypres)</h2>
+                <p>
+                    Dans les environs d'Ypres, de nouvelles technologies cruelles comme le gaz toxique (utilisé massivement pour la première fois en 1915) ont été testées. C'est ici que s'est manifestée l'impuissance de la stratégie face aux conditions chimiques et géographiques (paysage marécageux).
+                </p>
+            </div>
+        </section>
+
+        <section class="fade-in quiz-container">
+            <h2>Testez vos connaissances !</h2>
+            <div id="quiz">
+                <div class="quiz-question">
+                    <p id="question-text">1. Quel objectif Falkenhayn poursuivait-il avec la stratégie de Verdun ?</p>
+                    <ul class="quiz-options" id="options-list">
+                        <!-- Options générées par JS -->
+                    </ul>
+                </div>
+                <div id="quiz-feedback"></div>
+                <button onclick="nextQuestion()" id="next-btn" style="display:none; background: var(--secondary); color: white; border: none; padding: 1rem 2rem; cursor: pointer; font-family: var(--font-heading); margin-top: 1rem;">Question suivante</button>
+            </div>
+        </section>
+
+        <p style="margin-top: 4rem;"><a href="folgen.html">Les conséquences humanitaires et la mémoire ></a></p>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 – Projet d'Archives Historiques : Le Front de l'Ouest 1914-1918</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const quizData = [
+            {
+                q: "1. Quel objectif Falkenhayn poursuivait-il avec la stratégie de Verdun ?",
+                a: ["Prise de Paris", "Saigner l'adversaire", "Percée rapide vers l'Angleterre"],
+                c: 1
+            },
+            {
+                q: "2. Quel pays a utilisé le gaz toxique à grande échelle pour la première fois à Ypres ?",
+                a: ["Grande-Bretagne", "France", "Empire allemand"],
+                c: 2
+            },
+            {
+                q: "3. Quel a été le résultat de l'offensive de la Somme en 1916 ?",
+                a: ["Une victoire stratégique rapide", "Plus d'un million de pertes sans percée", "L'armistice immédiat"],
+                c: 1
+            },
+            {
+                q: "4. Qu'entend-on par « bataille de matériel » ?",
+                a: ["Une réunion diplomatique", "Une guerre dont le sort est scellé par l'utilisation massive de biens et de technologie", "Une attaque de cavalerie rapide"],
+                c: 1
+            },
+            {
+                q: "5. Quelle était environ la longueur de la ligne de front sur le front de l'Ouest ?",
+                a: ["100 km", "700 km", "5000 km"],
+                c: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+
+        function loadQuestion() {
+            const q = quizData[currentQuestion];
+            document.getElementById('question-text').innerText = q.q;
+            const list = document.getElementById('options-list');
+            list.innerHTML = '';
+            q.a.forEach((opt, index) => {
+                const li = document.createElement('li');
+                li.className = 'quiz-option';
+                li.innerText = opt;
+                li.onclick = () => checkAnswer(index);
+                list.appendChild(li);
+            });
+            document.getElementById('quiz-feedback').innerText = '';
+            document.getElementById('next-btn').style.display = 'none';
+        }
+
+        function checkAnswer(idx) {
+            const q = quizData[currentQuestion];
+            const options = document.querySelectorAll('.quiz-option');
+
+            if (idx === q.c) {
+                options[idx].classList.add('correct');
+                document.getElementById('quiz-feedback').innerText = "Correct !";
+            } else {
+                options[idx].classList.add('incorrect');
+                options[q.c].classList.add('correct');
+                document.getElementById('quiz-feedback').innerText = "Faux. La bonne réponse est : " + q.a[q.c];
+            }
+
+            // Désactiver toutes les options
+            options.forEach(opt => opt.onclick = null);
+            document.getElementById('next-btn').style.display = 'block';
+            if (currentQuestion === quizData.length - 1) {
+                document.getElementById('next-btn').innerText = "Quiz terminé";
+            }
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < quizData.length) {
+                loadQuestion();
+            } else {
+                document.getElementById('quiz').innerHTML = "<h3>Quiz terminé !</h3><p>Merci de votre participation.</p>";
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>

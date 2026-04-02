@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Auteurs – Le Front de l'Ouest 1914-1918</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .author-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .author-card {
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--secondary);
+        }
+        .author-name {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .author-bio {
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Le Front de l'Ouest 1914-1918</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="kontext.html">Contexte</a></li>
+            <li><a href="leben.html">Vie dans les tranchées</a></li>
+            <li><a href="schlachten.html">Batailles</a></li>
+            <li><a href="folgen.html">Conséquences</a></li>
+            <li><a href="quellen.html">Sources</a></li>
+            <li><a href="autoren.html">Auteurs</a></li>
+            <li><a href="spiel.html">Jeu</a></li>
+            <li style="margin-left: 2rem;"><a href="../autoren.html">DE</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Accueil</a> > Les Auteurs
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h1>Derrière le projet : Les Auteurs</h1>
+            <p>
+                Cette archive numérique a été développée par une équipe d'historiens et d'experts en humanités numériques afin de rendre accessible au grand public la complexité de la guerre de position sur le front de l'Ouest. Notre objectif est une présentation scientifiquement fondée, mais néanmoins accessible, de la « catastrophe originelle du XXe siècle ».
+            </p>
+
+            <div class="author-grid">
+                <div class="author-card">
+                    <div class="author-name">Mazin El Meligy</div>
+                    <p class="author-bio">
+                        Mazin El Meligy est spécialiste de l'histoire militaire du début du XXe siècle, avec un accent sur le développement technologique des systèmes d'armes et leur influence sur la conduite tactique de la guerre. Ses recherches portent sur les batailles de matériel de 1916.
+                    </p>
+                </div>
+                <div class="author-card">
+                    <div class="author-name">Lara Criveli</div>
+                    <p class="author-bio">
+                        Lara Criveli se consacre à l'histoire sociale de la Première Guerre mondiale. Elle analyse principalement les lettres de soldats et les journaux intimes pour comprendre les effets psychologiques de la guerre des tranchées sur l'individu. Elle a déjà assuré le commissariat de plusieurs expositions sur le thème « Front intérieur et tranchées ».
+                    </p>
+                </div>
+                <div class="author-card">
+                    <div class="author-name">Eve Menetrey</div>
+                    <p class="author-bio">
+                        Eve Menetrey est experte en culture de la mémoire et en histoire transnationale. Ses recherches portent sur la question de l'ancrage du front de l'Ouest dans la mémoire collective de l'Europe et sur le rôle des lieux de mémoire dans le processus de réconciliation actuel.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 – Projet d'Archives Historiques : Le Front de l'Ouest 1914-1918</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
