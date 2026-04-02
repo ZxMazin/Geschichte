@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entscheidungen an der Westfront – Das Spiel</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .game-container {
+            background: white;
+            padding: 3rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 10px solid var(--accent);
+            margin-top: 2rem;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #game-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .choice-btn {
+            background: var(--primary);
+            color: var(--background);
+            border: none;
+            padding: 1rem 1.5rem;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-body);
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+
+        .choice-btn:hover {
+            background: var(--accent);
+        }
+
+        #game-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 2rem;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Die Westfront 1914–1918</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="kontext.html">Kontext</a></li>
+            <li><a href="leben.html">Leben im Graben</a></li>
+            <li><a href="schlachten.html">Schlachten</a></li>
+            <li><a href="folgen.html">Folgen</a></li>
+            <li><a href="quellen.html">Quellen</a></li>
+            <li><a href="autoren.html">Autoren</a></li>
+            <li><a href="spiel.html">Spiel</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Startseite</a> > Entscheidungssimulation
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h1>Entscheidungen im Graben: Eine Simulation</h1>
+            <p>
+                In dieser interaktiven Simulation nimmst du die Rolle eines jungen Soldaten an der Westfront im Jahr 1916 ein. Deine Entscheidungen beeinflussen nicht nur dein Schicksal, sondern spiegeln auch die historischen Dilemmata der damaligen Zeit wider.
+            </p>
+
+            <div class="game-container">
+                <div id="game-image" style="background-image: url('assets/img/hero.jpg');"></div>
+                <div id="game-content">
+                    <p id="game-text">Es ist Oktober 1916. Du befindest dich in einem schlammigen Grabenabschnitt nahe der Somme. Das Trommelfeuer der feindlichen Artillerie hat gerade nachgelassen. Dein Kommandant befiehlt einen Vorstoß in das Niemandsland, um eine feindliche MG-Stellung auszuschalten. Was tust du?</p>
+                    <div id="choices">
+                        <button class="choice-btn" onclick="makeChoice(1)">Du folgst dem Befehl sofort und kletterst aus dem Graben.</button>
+                        <button class="choice-btn" onclick="makeChoice(2)">Du wartest einen Moment, um die Lage zu sondieren und Deckung zu suchen.</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 – Historisches Archiv Projekt: Die Westfront 1914–1918</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const gameData = {
+            start: {
+                text: "Es ist Oktober 1916. Du befindest dich in einem schlammigen Grabenabschnitt nahe der Somme. Das Trommelfeuer der feindlichen Artillerie hat gerade nachgelassen. Dein Kommandant befiehlt einen Vorstoß in das Niemandsland, um eine feindliche MG-Stellung auszuschalten. Was tust du?",
+                choices: [
+                    { text: "Du folgst dem Befehl sofort und kletterst aus dem Graben.", next: 'charge' },
+                    { text: "Du wartest einen Moment, um die Lage zu sondieren und Deckung zu suchen.", next: 'wait' }
+                ]
+            },
+            charge: {
+                text: "Du stürmst nach vorne. Der Schlamm ist tief und behindert dein Fortkommen. Das MG-Feuer setzt plötzlich wieder ein. Du merkst, dass der Drahtverhau vor der feindlichen Stellung nicht durch die Artillerie zerstört wurde.",
+                choices: [
+                    { text: "Du versuchst, den Draht mit einer Schere zu durchtrennen.", next: 'wire' },
+                    { text: "Du wirfst dich in einen Granattrichter, um Deckung zu suchen.", next: 'crater' }
+                ]
+            },
+            wait: {
+                text: "Dein kurzes Zögern rettet dir vermutlich das Leben, da die ersten Kameraden im MG-Feuer fallen. Dein Kommandant brüllt dich an, endlich vorzurücken. Die Situation ist aussichtslos.",
+                choices: [
+                    { text: "Du rückst nun vorsichtig von Trichter zu Trichter vor.", next: 'crater' },
+                    { text: "Du weigerst dich vorzurücken, da es ein Selbstmordkommando ist.", next: 'refuse' }
+                ]
+            },
+            wire: {
+                text: "Ein fataler Fehler. Während du am Draht hantierst, wirst du zum leichten Ziel. Historisch gesehen war der unzerstörte Stacheldraht eine der Hauptursachen für das Scheitern vieler Offensiven.",
+                choices: [
+                    { text: "Neustart", next: 'start' }
+                ]
+            },
+            crater: {
+                text: "Du liegst im Wasser eines Granattrichters. Neben dir liegen Überreste früherer Angriffe. Du bist isoliert. Die Nacht bricht herein. Du musst entscheiden: Zurück zu den eigenen Linien oder versuchen, die Stellung doch noch zu erreichen?",
+                choices: [
+                    { text: "Rückzug unter dem Schutz der Dunkelheit.", next: 'retreat' },
+                    { text: "Ein einsamer Angriff im Schutze der Nacht.", next: 'night_attack' }
+                ]
+            },
+            refuse: {
+                text: "Befehlsverweigerung im Feld wurde oft drakonisch bestraft. Du wirst festgenommen. Dies illustriert die gnadenlose Militärjustiz, die Individualschicksale der strategischen Disziplin unterordnete.",
+                choices: [
+                    { text: "Neustart", next: 'start' }
+                ]
+            },
+            retreat: {
+                text: "Nach Stunden im Schlamm erreichst du deine Linien. Du bist am Leben, aber psychisch gezeichnet. Du hast den 'Shell Shock' am eigenen Leib erfahren. Du wirst in ein Lazarett hinter der Front verlegt.",
+                choices: [
+                    { text: "Simulation beendet - Zum Fazit", next: 'end' }
+                ]
+            },
+            night_attack: {
+                text: "Dein mutiger Versuch scheitert an der Erschöpfung und der Orientierungslosigkeit. Du wirst vermisst gemeldet. Wie Millionen andere bleibst du ein 'unbekannter Soldat' in den Feldern Frankreichs.",
+                choices: [
+                    { text: "Neustart", next: 'start' }
+                ]
+            },
+            end: {
+                text: "Die Simulation zeigt: Im industriellen Krieg gab es oft keine 'richtige' Entscheidung. Das Einzelschicksal war der Logik der Materialschlacht unterworfen. Überleben war oft eine Frage des puren Zufalls.",
+                choices: [
+                    { text: "Zurück zur Startseite", next: 'index' }
+                ]
+            }
+        };
+
+        function makeChoice(choiceIndex) {
+            const currentStep = document.getElementById('game-text').dataset.step || 'start';
+            const nextKey = gameData[currentStep].choices[choiceIndex - 1].next;
+
+            if (nextKey === 'index') {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            updateGame(nextKey);
+        }
+
+        function updateGame(stepKey) {
+            const step = gameData[stepKey];
+            const textEl = document.getElementById('game-text');
+            const choicesEl = document.getElementById('choices');
+
+            textEl.innerText = step.text;
+            textEl.dataset.step = stepKey;
+
+            choicesEl.innerHTML = '';
+            step.choices.forEach((choice, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'choice-btn';
+                btn.innerText = choice.text;
+                btn.onclick = () => makeChoice(index + 1);
+                choicesEl.appendChild(btn);
+            });
+
+            // Scroll to game container
+            document.querySelector('.game-container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initialize dataset
+        document.getElementById('game-text').dataset.step = 'start';
+    </script>
+</body>
+</html>

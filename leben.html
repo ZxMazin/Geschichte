@@ -31,14 +31,14 @@
 
         .img-before {
             background-image: url('assets/img/fleury_before.jpg');
-            z-index: 1;
+            width: 50%;
+            z-index: 2;
+            border-right: 4px solid var(--accent);
         }
 
         .img-after {
             background-image: url('assets/img/fleury_after.jpg');
-            width: 50%;
-            z-index: 2;
-            border-right: 4px solid var(--accent);
+            z-index: 1;
         }
 
         .slider-handle {
@@ -78,6 +78,8 @@
             <li><a href="schlachten.html">Schlachten</a></li>
             <li><a href="folgen.html">Folgen</a></li>
             <li><a href="quellen.html">Quellen</a></li>
+            <li><a href="autoren.html">Autoren</a></li>
+            <li><a href="spiel.html">Spiel</a></li>
         </ul>
         <div class="hamburger">
             <div class="line1"></div>
@@ -126,8 +128,8 @@
             <h2>Bildervergleich: Vor und nach dem Bombardement</h2>
             <p>Verwende den Schieberegler, um das Dorf Fleury vor und nach der Schlacht von Verdun zu vergleichen.</p>
             <div class="slider-container" id="slider">
-                <div class="slider-img img-before"></div>
-                <div class="slider-img img-after" id="imgAfter"></div>
+                <div class="slider-img img-after"></div>
+                <div class="slider-img img-before" id="imgBefore"></div>
                 <div class="slider-handle" id="handle">↔</div>
             </div>
             <figcaption style="font-size: 0.8rem; font-style: italic;">
@@ -140,14 +142,14 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 – Historisches Archiv Projekt: Die Westfront 1914–1918</p>
+            <p>&copy; 2026 – Historisches Archiv Projekt: Die Westfront 1914–1918</p>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
     <script>
         const slider = document.getElementById('slider');
-        const imgAfter = document.getElementById('imgAfter');
+        const imgBefore = document.getElementById('imgBefore');
         const handle = document.getElementById('handle');
 
         let isResizing = false;
@@ -159,7 +161,7 @@
             if (position < 0) position = 0;
             if (position > 100) position = 100;
 
-            imgAfter.style.width = `${position}%`;
+            imgBefore.style.width = `${position}%`;
             handle.style.left = `${position}%`;
         };
 
