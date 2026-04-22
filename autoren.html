@@ -20,6 +20,18 @@
             padding: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border-top: 5px solid var(--secondary);
+            text-align: center;
+        }
+        .author-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .author-card:hover .author-img {
+            filter: grayscale(0%);
         }
         .author-name {
             font-family: var(--font-heading);
@@ -59,9 +71,27 @@
     <main>
         <section class="fade-in" style="text-align: center; margin-top: 5rem;">
             <h1>Die Autoren</h1>
-            <p style="font-size: 1.5rem; margin-top: 2rem;">
+            <p style="font-size: 1.2rem; margin-top: 1rem; margin-bottom: 3rem; font-style: italic;">
                 Schüler der Klasse 3B1 am Kollegium Gambach
             </p>
+
+            <div class="author-grid">
+                <div class="author-card">
+                    <img src="assets/img/lara.jpeg" alt="Lara Criveli" class="author-img">
+                    <div class="author-name">Lara Criveli</div>
+                    <div class="author-bio">3B1 Student</div>
+                </div>
+                <div class="author-card">
+                    <img src="assets/img/mazin.jpg" alt="Mazin El Meligy" class="author-img">
+                    <div class="author-name">Mazin El Meligy</div>
+                    <div class="author-bio">3B1 Student & Informatik-Enthusiast</div>
+                </div>
+                <div class="author-card">
+                    <img src="assets/img/eve.jpeg" alt="Eve Ménétré" class="author-img">
+                    <div class="author-name">Eve Ménétré</div>
+                    <div class="author-bio">3B1 Student</div>
+                </div>
+            </div>
         </section>
     </main>
 
