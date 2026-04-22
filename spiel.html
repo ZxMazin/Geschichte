@@ -108,59 +108,59 @@
     <script>
         const gameData = {
             start: {
-                text: "Es ist Oktober 1916. Du befindest dich in einem schlammigen Grabenabschnitt nahe der Somme. Das Trommelfeuer der feindlichen Artillerie hat gerade nachgelassen. Dein Kommandant befiehlt einen Vorstoß in das Niemandsland, um eine feindliche MG-Stellung auszuschalten. Was tust du?",
+                text: "Es ist Oktober 1916. Ein eisiger Regen fällt auf die zerschossene Landschaft an der Somme. Das tagelange Trommelfeuer hat gerade aufgehört – eine unheimliche Stille breitet sich aus. Dein Kommandant klettert auf die Leiter und brüllt: 'Anpfeifen! In zwei Minuten über die Parapet!' Du sollst eine feindliche MG-Stellung ausschalten, die den gesamten Sektor beherrscht. Dein Herz rast. Was tust du?",
                 choices: [
-                    { text: "Du folgst dem Befehl sofort und kletterst aus dem Graben.", next: 'charge' },
-                    { text: "Du wartest einen Moment, um die Lage zu sondieren und Deckung zu suchen.", next: 'wait' }
+                    { text: "Du folgst dem Befehl sofort, stößt den Schrei deiner Einheit aus und kletterst über den Rand.", next: 'charge' },
+                    { text: "Du zögerst eine Sekunde, um die Lage im Niemandsland durch ein Periskop zu prüfen.", next: 'wait' }
                 ]
             },
             charge: {
-                text: "Du stürmst nach vorne. Der Schlamm ist tief und behindert dein Fortkommen. Das MG-Feuer setzt plötzlich wieder ein. Du merkst, dass der Drahtverhau vor der feindlichen Stellung nicht durch die Artillerie zerstört wurde.",
+                text: "Du stolperst in das Niemandsland. Der Boden ist ein einziges Meer aus klebrigem, stinkendem Schlamm, der dir bis zu den Knien reicht. Plötzlich peitschen die Schüsse des feindlichen Maschinengewehrs durch die Luft. Du siehst, dass der Stacheldraht vor dir unversehrt ist – die Artillerie hat ihn nicht zerstört, wie es versprochen wurde.",
                 choices: [
-                    { text: "Du versuchst, den Draht mit einer Schere zu durchtrennen.", next: 'wire' },
-                    { text: "Du wirfst dich in einen Granattrichter, um Deckung zu suchen.", next: 'crater' }
+                    { text: "Du versuchst verzweifelt, den Draht mit der Schere zu durchtrennen.", next: 'wire' },
+                    { text: "Du wirfst dich in einen wassergefüllten Granattrichter, um dem Kugelhagel zu entkommen.", next: 'crater' }
                 ]
             },
             wait: {
-                text: "Dein kurzes Zögern rettet dir vermutlich das Leben, da die ersten Kameraden im MG-Feuer fallen. Dein Kommandant brüllt dich an, endlich vorzurücken. Die Situation ist aussichtslos.",
+                text: "Dein kurzes Zögern rettet dir das Leben, während die erste Welle deiner Kameraden im mörderischen Kreuzfeuer niedergemäht wird. Der Kommandant sieht dich mit brennendem Zorn an und zieht seine Pistole: 'Vorwärts, du Hund, oder ich erschieße dich hier!' Die Disziplin im Graben ist gnadenlos.",
                 choices: [
-                    { text: "Du rückst nun vorsichtig von Trichter zu Trichter vor.", next: 'crater' },
-                    { text: "Du weigerst dich vorzurücken, da es ein Selbstmordkommando ist.", next: 'refuse' }
+                    { text: "Du kriechst nun geduckt aus dem Graben und versuchst, Deckung in Trichtern zu finden.", next: 'crater' },
+                    { text: "Du weigerst dich standhaft, in den sicheren Tod zu gehen.", next: 'refuse' }
                 ]
             },
             wire: {
-                text: "Ein fataler Fehler. Während du am Draht hantierst, wirst du zum leichten Ziel. Historisch gesehen war der unzerstörte Stacheldraht eine der Hauptursachen für das Scheitern vieler Offensiven.",
+                text: "Das Metall der Schere klirrt gegen den Draht. Es ist ein hoffnungsloses Unterfangen. Im Licht einer Leuchtrakete wirst du für den MG-Schützen sichtbar. Ein kurzer Feuerstoß beendet alles. Historisch gesehen war unzerstörter Stacheldraht das Todesurteil für ganze Regimenter.",
                 choices: [
-                    { text: "Neustart", next: 'start' }
+                    { text: "Die Geschichte neu schreiben (Neustart)", next: 'start' }
                 ]
             },
             crater: {
-                text: "Du liegst im Wasser eines Granattrichters. Neben dir liegen Überreste früherer Angriffe. Du bist isoliert. Die Nacht bricht herein. Du musst entscheiden: Zurück zu den eigenen Linien oder versuchen, die Stellung doch noch zu erreichen?",
+                text: "Du liegst schwer atmend im stinkenden Wasser eines Trichters. Um dich herum nur Schlamm und die Überreste vergangener Angriffe. Die Dunkelheit bricht herein, und die Kälte kriecht in deine Knochen. Du bist allein im Niemandsland. Deine einzige Hoffnung ist die Nacht.",
                 choices: [
-                    { text: "Rückzug unter dem Schutz der Dunkelheit.", next: 'retreat' },
-                    { text: "Ein einsamer Angriff im Schutze der Nacht.", next: 'night_attack' }
+                    { text: "Du versuchst, dich im Schutz der Finsternis zurück zu deinen Linien zu schleppen.", next: 'retreat' },
+                    { text: "Du wagst einen verzweifelten Alleingang gegen das feindliche MG.", next: 'night_attack' }
                 ]
             },
             refuse: {
-                text: "Befehlsverweigerung im Feld wurde oft drakonisch bestraft. Du wirst festgenommen. Dies illustriert die gnadenlose Militärjustiz, die Individualschicksale der strategischen Disziplin unterordnete.",
+                text: "Befehlsverweigerung im Angesicht des Feindes wird als Feigheit ausgelegt. Du wirst entwaffnet und vor ein Standgericht gestellt. Dein Schicksal illustriert die brutale Logik der Militärjustiz, die den Gehorsam über das menschliche Leben stellte.",
                 choices: [
-                    { text: "Neustart", next: 'start' }
+                    { text: "Die Geschichte neu schreiben (Neustart)", next: 'start' }
                 ]
             },
             retreat: {
-                text: "Nach Stunden im Schlamm erreichst du deine Linien. Du bist am Leben, aber psychisch gezeichnet. Du hast den 'Shell Shock' am eigenen Leib erfahren. Du wirst in ein Lazarett hinter der Front verlegt.",
+                text: "Nach Stunden des Robben durch Leichen und Unrat erreichst du völlig entkräftet deinen Graben. Du hast überlebt, aber dein Geist ist gebrochen. Das Zittern in deinen Händen wird nie wieder aufhören – die Ärzte nennen es 'Shell Shock'. Du wirst als kriegsuntauglich in die Heimat geschickt, in eine Welt, die dein Schweigen nicht verstehen wird.",
                 choices: [
-                    { text: "Simulation beendet - Zum Fazit", next: 'end' }
+                    { text: "Simulation beendet - Zur historischen Einordnung", next: 'end' }
                 ]
             },
             night_attack: {
-                text: "Dein mutiger Versuch scheitert an der Erschöpfung und der Orientierungslosigkeit. Du wirst vermisst gemeldet. Wie Millionen andere bleibst du ein 'unbekannter Soldat' in den Feldern Frankreichs.",
+                text: "In der absoluten Dunkelheit verlierst du die Orientierung. Du trittst auf eine Mine oder wirst von einer verirrten Kugel getroffen. Du bleibst zurück als einer der Millionen 'Vermissten', deren Namen nur noch auf den großen Denkmälern in Frankreich stehen werden.",
                 choices: [
-                    { text: "Neustart", next: 'start' }
+                    { text: "Die Geschichte neu schreiben (Neustart)", next: 'start' }
                 ]
             },
             end: {
-                text: "Die Simulation zeigt: Im industriellen Krieg gab es oft keine 'richtige' Entscheidung. Das Einzelschicksal war der Logik der Materialschlacht unterworfen. Überleben war oft eine Frage des puren Zufalls.",
+                text: "Die Simulation verdeutlicht das Dilemma des Einzelnen: Im industriellen Krieg gab es oft keine 'richtigen' Entscheidungen. Das Überleben war weniger eine Frage von Mut oder Geschick, sondern unterlag der grausamen Wahrscheinlichkeit der Materialschlacht. Jede Wahl führte in eine neue Form des Schreckens.",
                 choices: [
                     { text: "Zurück zur Startseite", next: 'index' }
                 ]
