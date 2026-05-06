@@ -88,7 +88,7 @@
             <div class="game-container">
                 <div id="game-image" style="background-image: url('assets/img/hero.jpg');"></div>
                 <div id="game-content">
-                    <p id="game-text">Es ist Oktober 1916. Du befindest dich in einem schlammigen Grabenabschnitt nahe der Somme. Das Trommelfeuer der feindlichen Artillerie hat gerade nachgelassen. Dein Kommandant befiehlt einen Vorstoß in das Niemandsland, um eine feindliche MG-Stellung auszuschalten. Was tust du?</p>
+                    <p id="game-text">Es ist Oktober 1916. Du befindest dich in einem schlammigen Grabenabschnitt nahe der Somme. Das Trommelfeuer der feindlichen Artillerie hat gerade nachgelassen. Dein Kommandant befiehlt einen Vorstoss in das Niemandsland, um eine feindliche MG-Stellung auszuschalten. Was tust du?</p>
                     <div id="choices">
                         <button class="choice-btn" onclick="makeChoice(1)">Du folgst dem Befehl sofort und kletterst aus dem Graben.</button>
                         <button class="choice-btn" onclick="makeChoice(2)">Du wartest einen Moment, um die Lage zu sondieren und Deckung zu suchen.</button>
@@ -110,7 +110,7 @@
             start: {
                 text: "Es ist Oktober 1916. Ein eisiger Regen fällt auf die zerschossene Landschaft an der Somme. Das tagelange Trommelfeuer hat gerade aufgehört – eine unheimliche Stille breitet sich aus. Dein Kommandant klettert auf die Leiter und brüllt: 'Anpfeifen! In zwei Minuten über die Parapet!' Du sollst eine feindliche MG-Stellung ausschalten, die den gesamten Sektor beherrscht. Dein Herz rast. Was tust du?",
                 choices: [
-                    { text: "Du folgst dem Befehl sofort, stößt den Schrei deiner Einheit aus und kletterst über den Rand.", next: 'charge' },
+                    { text: "Du folgst dem Befehl sofort, stösst den Schrei deiner Einheit aus und kletterst über den Rand.", next: 'charge' },
                     { text: "Du zögerst eine Sekunde, um die Lage im Niemandsland durch ein Periskop zu prüfen.", next: 'wait' }
                 ]
             },
@@ -122,14 +122,14 @@
                 ]
             },
             wait: {
-                text: "Dein kurzes Zögern rettet dir das Leben, während die erste Welle deiner Kameraden im mörderischen Kreuzfeuer niedergemäht wird. Der Kommandant sieht dich mit brennendem Zorn an und zieht seine Pistole: 'Vorwärts, du Hund, oder ich erschieße dich hier!' Die Disziplin im Graben ist gnadenlos.",
+                text: "Dein kurzes Zögern rettet dir das Leben, während die erste Welle deiner Kameraden im mörderischen Kreuzfeuer niedergemäht wird. Der Kommandant sieht dich mit brennendem Zorn an und zieht seine Pistole: 'Vorwärts, du Hund, oder ich erschiesse dich hier!' Die Disziplin im Graben ist gnadenlos.",
                 choices: [
                     { text: "Du kriechst nun geduckt aus dem Graben und versuchst, Deckung in Trichtern zu finden.", next: 'crater' },
                     { text: "Du weigerst dich standhaft, in den sicheren Tod zu gehen.", next: 'refuse' }
                 ]
             },
             wire: {
-                text: "Das Metall der Schere klirrt gegen den Draht. Es ist ein hoffnungsloses Unterfangen. Im Licht einer Leuchtrakete wirst du für den MG-Schützen sichtbar. Ein kurzer Feuerstoß beendet alles. Historisch gesehen war unzerstörter Stacheldraht das Todesurteil für ganze Regimenter.",
+                text: "Das Metall der Schere klirrt gegen den Draht. Es ist ein hoffnungsloses Unterfangen. Im Licht einer Leuchtrakete wirst du für den MG-Schützen sichtbar. Ein kurzer Feuerstoss beendet alles. Historisch gesehen war unzerstörter Stacheldraht das Todesurteil für ganze Regimenter.",
                 choices: [
                     { text: "Die Geschichte neu schreiben (Neustart)", next: 'start' }
                 ]
@@ -154,7 +154,7 @@
                 ]
             },
             night_attack: {
-                text: "In der absoluten Dunkelheit verlierst du die Orientierung. Du trittst auf eine Mine oder wirst von einer verirrten Kugel getroffen. Du bleibst zurück als einer der Millionen 'Vermissten', deren Namen nur noch auf den großen Denkmälern in Frankreich stehen werden.",
+                text: "In der absoluten Dunkelheit verlierst du die Orientierung. Du trittst auf eine Mine oder wirst von einer verirrten Kugel getroffen. Du bleibst zurück als einer der Millionen 'Vermissten', deren Namen nur noch auf den grossen Denkmälern in Frankreich stehen werden.",
                 choices: [
                     { text: "Die Geschichte neu schreiben (Neustart)", next: 'start' }
                 ]
